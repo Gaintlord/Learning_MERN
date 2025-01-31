@@ -15,14 +15,7 @@ LastName:String
 });
 
 
-const unpaiduserSchema = new Schema({
-    email:{type:String , unique:true},
-    password:String,
-    FirstName:String,
-    LastName:String
-    
-    
-    });
+
 const adminSchema =new Schema({
 
 email:{type:String , unique:true},
@@ -50,12 +43,11 @@ const usermodel = mongoose.model('user',userSchema)
 const adminmodel = mongoose.model('admin',adminSchema)
 const coursemodel = mongoose.model('course',courseSchema)
 const purchasemodel = mongoose.model('purchase',purchaseSchema)
-const unpaidusermodel=mongoose.model('unpaidmodel',unpaiduserSchema)
+
 
 module.exports = {
     usermodel,
     adminmodel,
     coursemodel,
-    purchasemodel,
-    unpaidusermodel
-}
+    purchasemodel
+}              
